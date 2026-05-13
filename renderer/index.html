@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>SpotManager</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>SpotManager — Gestión de Proveedores</h1>
+
+  <section>
+    <h2>Tipos de proveedor</h2>
+
+    <input id="typeName" placeholder="Nombre del tipo">
+    <button onclick="saveType()">Guardar</button>
+
+    <table id="typesTable"></table>
+  </section>
+
+  <section>
+    <h2>Proveedores</h2>
+
+    <input id="provName" placeholder="Nombre">
+    <input id="provPhone" placeholder="Teléfono">
+    <input id="provAddress" placeholder="Dirección">
+    <input id="provRif" placeholder="RIF">
+    <input id="provLegal" placeholder="Representante legal">
+
+    <select id="provType"></select>
+
+    <button onclick="saveProvider()">Guardar proveedor</button>
+    <input type="hidden" id="provId">
+
+    <table id="providersTable"></table>
+  </section>
+
+  <section>
+  <h2>Servicios de Publicidad</h2>
+
+  <input type="hidden" id="adId">
+
+  <input id="adName" placeholder="Nombre del servicio">
+  <input id="adCost" placeholder="Costo" type="number">
+  <select id="adFreq">
+    <option value="diario">Diario</option>
+    <option value="semanal">Semanal</option>
+    <option value="mensual">Mensual</option>
+    <option value="anual">Anual</option>
+  </select>
+
+  <button onclick="saveAdService()">Guardar servicio</button>
+
+  <table id="adServicesTable">
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Costo</th>
+      <th>Frecuencia</th>
+      <th>Acciones</th>
+    </tr>
+  </table>
+</section>
+
+<section>
+  <h2>Paquetes de Publicidad</h2>
+
+  <input type="hidden" id="packId">
+  <input id="packName" placeholder="Nombre del paquete">
+  <input id="packCost" placeholder="Costo total" type="number">
+  <input id="packStart" type="date">
+  <input id="packEnd" type="date">
+
+  <h3>Servicios incluidos</h3>
+  <div id="packServicesList"></div>
+
+  <button onclick="saveAdPackage()">Guardar paquete</button>
+
+  <table id="adPackagesTable">
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Costo</th>
+      <th>Inicio</th>
+      <th>Fin</th>
+      <th>Acciones</th>
+    </tr>
+  </table>
+</section>
+
+<section>
+  <h2>Servicios de Mantenimiento / Expansión</h2>
+
+  <input type="hidden" id="mntId">
+
+  <input id="mntName" placeholder="Nombre del servicio">
+  <input id="mntCost" placeholder="Costo" type="number">
+
+  <button onclick="saveMaintenanceService()">Guardar servicio</button>
+
+  <table id="mntServicesTable">
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Costo</th>
+      <th>Acciones</th>
+    </tr>
+  </table>
+</section>
+
+
+  <script src="app.js"></script>
+</body>
+</html>
