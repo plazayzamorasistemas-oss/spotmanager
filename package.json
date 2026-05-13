@@ -1,0 +1,15 @@
+{
+  "name": "spotmanager",
+  "version": "1.0.0",
+  "description": "SpotManager - Gestión de proveedores (Electron + SQLite)",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "sqlite3": "5.0.2"
+  },
+  "devDependencies": {
+    "electron": "12.2.3"
+  }
+}
